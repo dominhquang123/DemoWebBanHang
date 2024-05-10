@@ -1,0 +1,112 @@
+.custom-bg {
+    background: #673ab7!important;
+}
+
+.admin .card {
+    border: 1px solid #673ab7;
+}
+
+.admin .card:hover {
+    background: #e2e2e2;
+    cursor: pointer;
+}
+
+.list-group-item.active {
+    background: #673ab7!important;
+    border-color: #673ab7!important;
+}
+
+.discount-label {
+    font-size: 12px!important;
+    font-style: italic!important;
+}
+
+.product-card:hover {
+    background: #e2e2e2;
+    cursor: pointer;
+}
+
+.card-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Tạo lưới với các cột có kích thước tối thiểu 250px và mở rộng để điền vào không gian */
+    grid-gap: 20px; /* Khoảng cách giữa các sản phẩm */
+}
+
+.product-card {
+    /* Thiết lập kích thước cố định cho mỗi sản phẩm */
+    border: 1px solid #673ab7;
+}
+
+.card-img-top {
+    /* Đảm bảo hình ảnh không bị bóp méo và căn giữa trong container */
+    width: 100%;
+    max-height: 200px; /* Giới hạn chiều cao của hình ảnh */
+    object-fit: cover;
+}
+
+.price-btn {
+    /* Căn giữa giá sản phẩm và nhãn giảm giá */
+    text-align: center;
+}
+
+.discount-label {
+    /* Cải thiện hiển thị nhãn giảm giá */
+    font-size: 12px;
+    font-style: italic;
+}
+
+/*toast*/
+
+#toast {
+    min-width: 300px;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%); /* Căn giữa thanh toast */
+    background: #333;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    z-index: 1000; /* Đảm bảo thanh toast hiển thị trên các phần tử khác */
+    font-size: 18px;
+    visibility: hidden;
+    box-shadow: 0px 0px 100px #000;
+}
+
+#toast.display {
+    visibility: visible;
+    animation: fadeIn 0.5s, fadeOut 0.5s 2.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+/* CSS cho màn hình có độ rộng dưới 768px (thiết bị di động) */
+@media only screen and (max-width: 768px) {
+    /* Viết CSS dành cho thiết bị di động ở đây */
+}
+
+/* CSS cho màn hình có độ rộng trên 768px (máy tính bảng và máy tính) */
+@media only screen and (min-width: 768px) {
+    /* Viết CSS dành cho máy tính bảng và máy tính ở đây */
+}
